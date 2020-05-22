@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Slack it') {
+            steps {
+                slackSend channel: '#alert'
+                          message: 'Hello, World!'
+            }
+        }
+    }
+}
